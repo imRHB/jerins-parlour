@@ -10,7 +10,7 @@ const Service = (props) => {
             <Card className="text-center p-5 border-0 rounded-3 service-card">
                 <img src={img} alt="" style={{ width: '72px', height: '72px' }} className="mx-auto" />
                 <Card.Body>
-                    <Card.Title>{name}</Card.Title>
+                    <Card.Title><span className="fw-bold">{name}</span></Card.Title>
                     <Card.Text>
                         <span className="fw-bold text-danger">${price}</span>
                     </Card.Text>

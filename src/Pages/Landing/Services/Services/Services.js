@@ -41,6 +41,10 @@ const Services = () => {
                     ></Service>)
                 }
             </Row>
+
+            <div className="my-5">
+                <button className="btn btn-jer">Explore More</button>
+            </div>
         </Container>
     );
 };
