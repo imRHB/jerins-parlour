@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { Link, NavLink, useHistory } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import './Navigation.css';
 
 import logo from '../../../images/logo.png';
@@ -46,11 +46,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
-/*
-
-<Link to="/login">
-                                    <Button variant="danger" className="btn-jer">Login</Button>
-                                </Link>
-
-*/

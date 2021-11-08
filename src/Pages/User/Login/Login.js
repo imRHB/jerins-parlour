@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Login.css';
 
@@ -14,16 +14,26 @@ const Login = () => {
     const { signInWithGoogle } = useFirebase();
 
     return (
-        <div className="my-5 text-center login-area">
-            <Container>
+        <div className="py-5 text-center login-area">
+            <Container className="my-5">
                 <div className="my-5">
                     <img src={logo} alt="logo" style={{ width: 'auto', height: '96px', padding: '4px' }} />
                 </div>
 
                 <div>
                     <h3 className="fw-bold">Login With</h3>
-                    <button onClick={signInWithGoogle} className="btn my-3 login-btn"><span className="text-secondary me-4">{googleIcon}</span> Continue with Google</button>
-                    <p>Don't have an account? <Link to="/register">
+
+                    <Button
+                        onClick={signInWithGoogle}
+                        className="my-3 login-btn"
+                    ><span
+                        className="me-4 social-icon"
+                    >{googleIcon}
+                        </span> Continue with Google</Button>
+
+                    <p>Don't have an account? <Link
+                        to="/register"
+                        className="user-toggle">
                         Create an account
                     </Link>
                     </p>
