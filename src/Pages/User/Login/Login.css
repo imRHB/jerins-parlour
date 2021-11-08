@@ -1,0 +1,15 @@
+.login-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60vh;
+}
+.login-btn {
+    font-size: 18px;
+    padding: 10px 24px;
+    border: 1px solid #F63E7B;
+    border-radius: 28px;
+}
+.login-btn:hover {
+    background-color: #E5E5E5;
+}

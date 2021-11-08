@@ -1,11 +1,19 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink, useHistory } from 'react-router-dom';
 import './Navigation.css';
 
 import logo from '../../../images/logo.png';
+import useFirebase from '../../../hooks/useFirebase';
 
 const Navigation = () => {
+    const { user, logout } = useFirebase();
+
+    const history = useHistory();
+
+    const handleLogin = () => {
+        history.push('/login');
+    };
 
     return (
         <Navbar>
@@ -21,7 +29,15 @@ const Navigation = () => {
                             <NavLink to="/contact">Contact Us</NavLink>
                         </Nav>
 
-                        <Button variant="danger" className="btn-jer">Login</Button>
+                        {
+                            user?.email ? <Button
+                                onClick={logout}
+                                variant="danger" className="btn-jer">Logout</Button>
+                                :
+                                <Button
+                                    onClick={handleLogin} variant="danger" className="btn-jer"
+                                >Login</Button>
+                        }
                     </div>
                 </div>
             </Container>
@@ -30,3 +46,11 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
+/*
+
+<Link to="/login">
+                                    <Button variant="danger" className="btn-jer">Login</Button>
+                                </Link>
+
+*/
