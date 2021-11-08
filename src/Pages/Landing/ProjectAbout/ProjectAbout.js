@@ -7,7 +7,7 @@ import spa from '../../../images/img/spa.png';
 const ProjectAbout = () => {
     return (
         <div className="py-5 project-banner">
-            <Container>
+            <Container className="my-5 py-5">
                 <Row className="g-5">
                     <Col>
                         <div>

@@ -30,22 +30,26 @@ const services = [
 const Services = () => {
 
     return (
-        <Container className="my-5 text-center">
-            <h3 className="fw-bold my-5">Our Awesome <span className="text-danger">Services</span></h3>
+        <div className="my-5 py-5 text-center">
+            <Container>
+                <h3 className="fw-bold my-3">Our Awesome <span className="text-danger">Services</span></h3>
 
-            <Row className="g-5">
-                {
-                    services.map((service, index) => <Service
-                        key={index}
-                        service={service}
-                    ></Service>)
-                }
-            </Row>
+                <div className="my-5">
+                    <Row className="g-5">
+                        {
+                            services.map((service, index) => <Service
+                                key={index}
+                                service={service}
+                            ></Service>)
+                        }
+                    </Row>
+                </div>
 
-            <div className="my-5">
-                <Button variant="danger" className="btn-jer">Explore More</Button>
-            </div>
-        </Container>
+                <div className="my-3">
+                    <Button variant="danger" className="btn-jer">Explore More</Button>
+                </div>
+            </Container>
+        </div>
     );
 };
 

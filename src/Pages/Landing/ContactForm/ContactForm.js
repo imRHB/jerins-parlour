@@ -3,9 +3,10 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import './ContactForm.css';
 
 const ContactForm = () => {
+
     return (
         <div className="py-5 form-area">
-            <Container>
+            <Container className="py-5">
                 <h2 className="fw-bold text-center">Let us handle your
                     <br />
                     project, professionally.</h2>
