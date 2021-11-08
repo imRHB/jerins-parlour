@@ -1,3 +1,6 @@
+import { faCommentAlt } from '@fortawesome/free-regular-svg-icons';
+import { faCartPlus, faPlus, faShoppingCart, faThLarge, faThList, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Col, Container, Nav, Row, Tab } from 'react-bootstrap';
 import AddService from '../AddService/AddService';
@@ -8,6 +11,14 @@ import OrderList from '../OrderList/OrderList';
 import Review from '../Review/Review';
 import './DashboardHome.css';
 
+const bookIcon = <FontAwesomeIcon icon={faCartPlus} />;
+const bookingIcon = <FontAwesomeIcon icon={faShoppingCart} />;
+const reviewIcon = <FontAwesomeIcon icon={faCommentAlt} />;
+const listIcon = <FontAwesomeIcon icon={faThList} />;
+const plus = <FontAwesomeIcon icon={faPlus} />;
+const userPlus = <FontAwesomeIcon icon={faUserPlus} />;
+const serviceIcon = <FontAwesomeIcon icon={faThLarge} />;
+
 const DashboardHome = () => {
     return (
         <div className="">
@@ -15,42 +26,50 @@ const DashboardHome = () => {
                 <Tab.Container id="left-tabs-example" defaultActiveKey="book">
                     <Row className="">
                         <Col sm={3}>
-                            <div className="bg-light rounded-3" style={{ minHeight: '80vh', position: 'sticky', top: '48px' }}>
+                            <div className="bg-light rounded-3 py-3" style={{ minHeight: '80vh', position: 'sticky', top: '48px' }}>
                                 <Nav variant="" className="flex-column dash-nav">
                                     <Nav.Item>
                                         <Nav.Link
                                             className="dash-nav-link"
-                                            eventKey="book">Book</Nav.Link>
+                                            eventKey="book"
+                                        >
+                                            <span className="me-3">{bookIcon}</span>Book</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
                                         <Nav.Link
                                             className="dash-nav-link"
-                                            eventKey="booking-list">Booking List</Nav.Link>
+                                            eventKey="booking-list">
+                                            <span className="me-3">{bookingIcon}</span>Booking List</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
                                         <Nav.Link
                                             className="dash-nav-link"
-                                            eventKey="review">Review</Nav.Link>
+                                            eventKey="review">
+                                            <span className="me-3">{reviewIcon}</span>Review</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
                                         <Nav.Link
                                             className="dash-nav-link"
-                                            eventKey="order-list">Order List</Nav.Link>
+                                            eventKey="order-list">
+                                            <span className="me-3">{listIcon}</span>Order List</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
                                         <Nav.Link
                                             className="dash-nav-link"
-                                            eventKey="add-service">Add Service</Nav.Link>
+                                            eventKey="add-service">
+                                            <span className="me-3">{plus}</span>Add Service</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
                                         <Nav.Link
                                             className="dash-nav-link"
-                                            eventKey="make-admin">Make Admin</Nav.Link>
+                                            eventKey="make-admin">
+                                            <span className="me-2">{userPlus}</span>Make Admin</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
                                         <Nav.Link
                                             className="dash-nav-link"
-                                            eventKey="manage-services">Manage Services</Nav.Link>
+                                            eventKey="manage-services">
+                                            <span className="me-3">{serviceIcon}</span>Manage Services</Nav.Link>
                                     </Nav.Item>
                                 </Nav>
                             </div>
