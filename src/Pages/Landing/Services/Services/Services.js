@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Button, Container, Row } from 'react-bootstrap';
 
 import face from '../../../../images/icon/Group 1373.png';
 import hair from '../../../../images/icon/Group 1372.png';
@@ -43,7 +43,7 @@ const Services = () => {
             </Row>
 
             <div className="my-5">
-                <button className="btn btn-jer">Explore More</button>
+                <Button variant="danger" className="btn-jer">Explore More</Button>
             </div>
         </Container>
     );

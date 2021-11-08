@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import './Banner.css';
 
 import woman from '../../../images/img/beautiful-woman.png';
@@ -14,7 +14,8 @@ const Banner = () => {
                             <h1 className="fw-bold">BEAUTY SALON</h1>
                             <h1 className="fw-bold">FOR EVERY WOMEN</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore obcaecati illo veniam impedit omnis exercitationem quidem. Aspernatur, amet excepturi beatae assumenda mollitia eos commodi eum perspiciatis pariatur vero, ipsum alias!</p>
-                            <button className="btn btn-jer">Get an Appointment</button>
+
+                            <Button variant="danger" className="btn-jer">Get an Appointment</Button>
                         </div>
                     </Col>
 

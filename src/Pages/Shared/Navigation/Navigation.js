@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './Navigation.css';
 
@@ -21,7 +21,7 @@ const Navigation = () => {
                             <NavLink to="/contact">Contact Us</NavLink>
                         </Nav>
 
-                        <button className="btn btn-jer">Login</button>
+                        <Button variant="danger" className="btn-jer">Login</Button>
                     </div>
                 </div>
             </Container>
