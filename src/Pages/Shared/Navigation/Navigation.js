@@ -1,13 +1,14 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink, useHistory } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 import './Navigation.css';
 
 import logo from '../../../images/logo.png';
-import useFirebase from '../../../hooks/useFirebase';
+
 
 const Navigation = () => {
-    const { user, logout } = useFirebase();
+    const { user, logout } = useAuth();
 
     const history = useHistory();
 
@@ -24,7 +25,7 @@ const Navigation = () => {
                     <div className="d-flex">
                         <Nav className="">
                             <NavLink to="/home">Home</NavLink>
-                            <NavLink to="/portfolio">Our Portfolio</NavLink>
+                            <NavLink to="/services">Services</NavLink>
                             <NavLink to="/team">Our Team</NavLink>
                             <NavLink to="/contact">Contact Us</NavLink>
                             {

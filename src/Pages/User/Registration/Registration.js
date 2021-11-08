@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Button, Container, FloatingLabel, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../../hooks/useFirebase';
+import useAuth from '../../../hooks/useAuth';
 import './Registration.css';
 
 const googleIcon = <FontAwesomeIcon icon={faGoogle} />;
 
 const Registration = () => {
-    const { signInWithGoogle } = useFirebase();
+    const { signInWithGoogle } = useAuth();
 
     return (
         <div className="py-5 reg-area">

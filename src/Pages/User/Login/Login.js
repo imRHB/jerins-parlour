@@ -1,17 +1,17 @@
 import React from 'react';
 import { Button, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 import './Login.css';
 
 import logo from '../../../images/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
-import useFirebase from '../../../hooks/useFirebase';
 
 const googleIcon = <FontAwesomeIcon icon={faGoogle} />;
 
 const Login = () => {
-    const { signInWithGoogle } = useFirebase();
+    const { signInWithGoogle } = useAuth();
 
     return (
         <div className="py-5 text-center login-area">
