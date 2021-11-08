@@ -27,6 +27,9 @@ const Navigation = () => {
                             <NavLink to="/portfolio">Our Portfolio</NavLink>
                             <NavLink to="/team">Our Team</NavLink>
                             <NavLink to="/contact">Contact Us</NavLink>
+                            {
+                                user?.email && <NavLink to="/dashboard">Dashboard</NavLink>
+                            }
                         </Nav>
 
                         {
