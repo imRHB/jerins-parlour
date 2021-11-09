@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from 'firebase/auth';
+import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import initializeFirebase from "../Firebase/firebase.init";
 
@@ -6,7 +6,8 @@ initializeFirebase();
 
 const useFirebase = () => {
     const [user, setUser] = useState({});
-    const [error, setError] = useState('');
+    const [authError, setAuthError] = useState('');
+    const [loading, setLoading] = useState(true);
 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
@@ -15,9 +16,42 @@ const useFirebase = () => {
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 setUser(result.user);
+                setAuthError('');
             })
             .catch(error => {
-                setError(error.message);
+                setAuthError(error.message);
+            })
+    };
+
+    const registerUser = (email, password) => {
+        setLoading(true);
+
+        createUserWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                setUser(result.user);
+                setAuthError('');
+            })
+            .catch(error => {
+                setAuthError(error.message);
+            })
+            .finally(() => {
+                setLoading(false);
+            })
+    };
+
+    const loginUser = (email, password) => {
+        setLoading(true);
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                setUser(result.user);
+                setAuthError('');
+            })
+            .catch(error => {
+                setAuthError(error.message);
+            })
+            .finally(() => {
+                setLoading(false);
             })
     };
 
@@ -29,25 +63,34 @@ const useFirebase = () => {
             else {
                 setUser({});
             }
+            setLoading(false);
         })
 
         return () => unsubscribed;
-    }, []);
+    }, [auth]);
 
     const logout = () => {
+        setLoading(true);
+
         signOut(auth)
             .then(() => {
-
+                setAuthError('');
             })
             .catch(error => {
-                setError(error.message);
+                setAuthError(error.message);
+            })
+            .finally(() => {
+                setLoading(false);
             })
     };
 
     return {
         user,
-        error,
+        authError,
+        loading,
         signInWithGoogle,
+        registerUser,
+        loginUser,
         logout
     }
 };

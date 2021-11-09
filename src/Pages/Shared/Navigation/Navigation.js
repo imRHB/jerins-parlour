@@ -36,10 +36,10 @@ const Navigation = () => {
                         {
                             user?.email ? <Button
                                 onClick={logout}
-                                variant="danger" className="btn-jer">Logout</Button>
+                                variant="danger" className="ms-2 btn-jer">Logout</Button>
                                 :
                                 <Button
-                                    onClick={handleLogin} variant="danger" className="btn-jer"
+                                    onClick={handleLogin} variant="danger" className="ms-2 btn-jer"
                                 >Login</Button>
                         }
                     </div>
