@@ -14,7 +14,7 @@ import Registration from './Pages/User/Registration/Registration';
 
 function App() {
   return (
-    <div className="">
+    <div className="App">
       <AuthProvider>
         <BrowserRouter>
           <Navigation></Navigation>

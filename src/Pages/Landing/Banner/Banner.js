@@ -21,7 +21,7 @@ const Banner = () => {
 
                     <Col>
                         <div className="d-flex justify-content-center">
-                            <img src={woman} alt="" style={{ width: '484px', height: '478px' }} />
+                            <img src={woman} alt="" style={{ width: '100%', height: 'auto' }} />
                         </div>
                     </Col>
                 </Row>

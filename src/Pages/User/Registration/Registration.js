@@ -1,8 +1,8 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Alert, Button, Container, FloatingLabel, Form, Spinner } from 'react-bootstrap';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
-import { Alert, Button, Container, FloatingLabel, Form, Spinner } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import './Registration.css';
 
