@@ -20,6 +20,7 @@ const userPlus = <FontAwesomeIcon icon={faUserPlus} />;
 const serviceIcon = <FontAwesomeIcon icon={faThLarge} />;
 
 const DashboardHome = () => {
+
     return (
         <div className="">
             <Container fluid className="p-5">

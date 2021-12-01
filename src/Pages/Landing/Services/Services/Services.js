@@ -41,7 +41,7 @@ const Services = () => {
                 <h3 className="fw-bold my-3">Our Awesome <span className="text-danger">Services</span></h3>
 
                 <div className="my-5">
-                    <Row className="g-5">
+                    <Row xs={1} sm={1} md={2} lg={3} xl={3} className="g-5">
                         {
                             services.map((service, index) => <Service
                                 key={index}

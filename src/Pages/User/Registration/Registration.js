@@ -19,7 +19,7 @@ const Registration = () => {
         const newLoginData = { ...loginData };
         newLoginData[field] = value;
         setLoginData(newLoginData);
-        // console.log(loginData);
+        console.log(loginData);
     }
 
     const handleRegistration = e => {
@@ -99,7 +99,7 @@ const Registration = () => {
                         </FloatingLabel>
 
                         <FloatingLabel
-                            controlId="floatingPassword"
+                            controlId="floatingConfirmPassword"
                             label="Confirm Password"
                             className="mb-3"
                         >

@@ -8,10 +8,10 @@ const ProjectAbout = () => {
     return (
         <div className="py-5 project-banner">
             <Container className="my-5 py-5">
-                <Row className="g-5">
+                <Row xs={1} sm={1} md={1} lg={2} xl={2} className="g-5">
                     <Col>
                         <div>
-                            <img src={spa} alt="" style={{ width: '580px', height: '381px' }} />
+                            <img src={spa} alt="" style={{ width: '100%', height: 'auto' }} />
                         </div>
                     </Col>
 

@@ -8,7 +8,7 @@ const Banner = () => {
     return (
         <div className="py-5 banner">
             <Container>
-                <Row className="g-5">
+                <Row xs={1} sm={1} md={1} lg={2} xl={2} className="g-5">
                     <Col className="d-flex align-items-center">
                         <div>
                             <h1 className="fw-bold">BEAUTY SALON</h1>

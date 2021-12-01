@@ -17,7 +17,7 @@ const Footer = () => {
     return (
         <div className="py-5 footer-area">
             <Container>
-                <Row className="g-4">
+                <Row xs={1} sm={1} md={2} lg={4} xl={4} className="g-4">
                     <Col>
                         <h3 className="fw-bold text-light">JERIN'S PARLOUR</h3>
                         <div className="d-flex align-items-center">

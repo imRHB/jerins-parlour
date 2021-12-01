@@ -38,7 +38,7 @@ const Testimonials = () => {
         <div className="my-5 py-5">
             <Container>
                 <h1 className="text-center fw-bold my-3">Testimonials</h1>
-                <Row className="my-3 g-5">
+                <Row xs={1} sm={1} md={2} lg={3} xl={3} className="my-3 g-5">
                     {
                         testimonials.map((testimonial, index) => <Testimonial
                             key={index}
